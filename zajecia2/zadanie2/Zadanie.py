@@ -5,36 +5,35 @@ from sklearn.linear_model import LogisticRegression
 import pylab
 import matplotlib.pyplot as plt
 
-rtrain = pd.read_csv('train/in.tsv', sep='\t', names=["GB", "A1", "A2", "B1", "B2", "C1", "C2","D1", "D2", "E1", "E2", "F1", "F2","G1", "G2", "H1", "H2", "I1", "I2","J1", "J2", "K1", "K2", "L1", "L2","M1", "M2", "N1", "N2", "O1", "O2","P1", "P2", "Q1", "Q2","R1", "R2"])
+rtrain = pd.read_csv('train/in.tsv', sep='\t', names=["results", "A1", "A2", "B1", "B2", "C1", "C2","D1", "D2", "E1", "E2", "F1", "F2","G1", "G2", "H1", "H2", "I1", "I2","J1", "J2", "K1", "K2", "L1", "L2","M1", "M2", "N1", "N2", "O1", "O2","P1", "P2", "Q1", "Q2","R1", "R2"])
 
 print(rtrain.describe())
 print('-' * 100)
-print('GB % :', end='')
-print(sum(rtrain.GB=="g") / len(rtrain))
-print('zero rule model accuracy on training set is',1 - sum(rtrain.GB=="g") / len(rtrain))
+print('results % :', end='')
+print(sum(rtrain.results=="g") / len(rtrain))
+print('zero rule model accuracy on training set is',1 - sum(rtrain.results=="g") / len(rtrain))
 print('-' * 100)
-
 
 lr_full = LogisticRegression()
 X = pd.DataFrame(rtrain, columns=['B1'])
-lr_full.fit(X, rtrain.GB)
+lr_full.fit(X, rtrain.results)
 
 print('True Positives: ', end ='')
-TP1=sum((lr_full.predict(X) == rtrain.GB) & (lr_full.predict(X) == "g"))
+TP1=sum((lr_full.predict(X) == rtrain.results) & (lr_full.predict(X) == "g"))
 print(TP1)
 print('True Negatives: ', end ='')
-TN1=sum((lr_full.predict(X) == rtrain.GB) & (lr_full.predict(X) == "b"))
+TN1=sum((lr_full.predict(X) == rtrain.results) & (lr_full.predict(X) == "b"))
 print(TN1)
 print('False Positives: ', end ='')
-FP1=sum((lr_full.predict(X) != rtrain.GB) & (lr_full.predict(X) == "g"))
+FP1=sum((lr_full.predict(X) != rtrain.results) & (lr_full.predict(X) == "g"))
 print(FP1)
 print('False Negatives: ', end ='')
-FN1=sum((lr_full.predict(X) != rtrain.GB) & (lr_full.predict(X) == "b"))
+FN1=sum((lr_full.predict(X) != rtrain.results) & (lr_full.predict(X) == "b"))
 print(FN1)
 print('-'*100)
 
 print('lr model on all variables except date accuracy on training data: ', end='')
-print(sum(lr_full.predict(X) == rtrain.GB) / len(rtrain))
+print(sum(lr_full.predict(X) == rtrain.results) / len(rtrain))
 print('sensitivity on training data:', end = '')
 print(TP1/(TP1+FN1))
 print('specificity on training data:', end = '')
@@ -48,7 +47,7 @@ rdev2 = pd.DataFrame(rdev2,columns = ["B1"])
 rdev_expected = pd.read_csv('dev-0/expected.tsv', sep='\t', names=['y'])
 print('-'*100)
 
-print('GB % :', end='')
+print('results % :', end='')
 print(sum(rdev_expected.y=="g") / len(rdev_expected))
 print('zero rule model accuracy on dev set is',1 - sum(rdev_expected.y=="g") / len(rdev_expected))
 print('-' * 100)
@@ -73,7 +72,6 @@ print('sensitivity on dev data (full model):', end = '')
 print(TP2/(TP2+FN2))
 print('specificity on dev data (full model):', end = '')
 print(TN2/(TN2+FP2))
-
 
 print('-'*100)
 print('writing to the expected file')
