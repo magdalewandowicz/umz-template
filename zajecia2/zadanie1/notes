@@ -1,0 +1,24 @@
+Occupancy % :0.2123296082524868
+zero rule model accuracy on training set is 0.7876703917475132
+----------------------------------------------------------------------------------------------------
+True Positives: 1724
+True Negatives: 6324
+False Positives: 90
+False Negatives: 5
+----------------------------------------------------------------------------------------------------
+lr model on all variables except date accuracy on training data: 0.9883335380081051
+sensitivity on training data:0.9971081550028918
+specificity on training data:0.9859681945743686
+----------------------------------------------------------------------------------------------------
+
+Occupancy % :0.3647279549718574
+zero rule model accuracy on dev set is 0.6352720450281426
+----------------------------------------------------------------------------------------------------
+True Positives: 969
+True Negatives: 1638
+False Positives: 55
+False Negatives: 3
+----------------------------------------------------------------------------------------------------
+accuracy on dev data (full model):0.9782363977485928
+sensitivity on dev data (full model):0.9969135802469136
+specificity on dev data (full model):0.96751329001772
