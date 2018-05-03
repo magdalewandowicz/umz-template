@@ -1,0 +1,24 @@
+results % :0.6932270916334662
+zero rule model accuracy on training set is 0.3067729083665338
+----------------------------------------------------------------------------------------------------
+True Positives: 172
+True Negatives: 65
+False Positives: 12
+False Negatives: 2
+----------------------------------------------------------------------------------------------------
+lr model on all variables except date accuracy on training data: 0.9442231075697212
+sensitivity on training data:0.9885057471264368
+specificity on training data:0.8441558441558441
+----------------------------------------------------------------------------------------------------
+results % :0.52
+zero rule model accuracy on dev set is 0.48
+----------------------------------------------------------------------------------------------------
+True Positives: 26
+True Negatives: 9
+False Positives: 15
+False Negatives: 0
+----------------------------------------------------------------------------------------------------
+accuracy on dev data (full model):0.7
+sensitivity on dev data (full model):1.0
+specificity on dev data (full model):0.375
+----------------------------------------------------------------------------------------------------
