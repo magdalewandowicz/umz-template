@@ -3,6 +3,7 @@ lista najczęstszych słów dla ham:
 lista najczęstszych słów dla spam:
 
 zero rule:
+<<<<<<< HEAD
 accuracy:0.5088967971530249
 sensivity:1
 specifity:0
@@ -41,3 +42,46 @@ specifity:0.9963898916967509
 precision:0.9952191235059761
 
 
+=======
+accuracy:
+sensivity:
+specifity
+precision:
+
+
+Bayes
+accuracy:
+sensivity:
+specifity
+precision:
+
+
+
+Bayes + stemmer lancester:
+accuracy:
+sensivity:
+specifity
+precision:
+
+
+Bayes + stemmer porter:
+accuracy:
+sensivity:
+specifity
+precision:
+
+Bayes + stemmer snowball:
+accuracy:
+sensivity:
+specifity
+precision:
+
+
+Bayes + laplac:
+alfa:
+beta:
+accuracy:
+sensivity:
+specifity
+precision:
+>>>>>>> 8e7b331d3b73f2214f0486caf0bf7352a0392273
