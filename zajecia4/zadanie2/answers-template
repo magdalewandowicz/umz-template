@@ -1,13 +1,31 @@
 TRAIN SET- NO DEPTH RESTRAIN
-accuracy:
+accuracy: 0,97
 
 TEST SET- NO DEPTH RESTRAIN
-accuracy:
+accuracy: 0,73
 
 TRAIN SET- MAX DEPTH 4
-accuracy:
+accuracy: 0,82
 
 TEST SET- MAX DEPTH 4
-accuracy:
+accuracy: 0,73
 
 YOUR OWN FOREST PARAMETERS:
+
+TRAIN SET- min_samples_leaf=2,n_jobs=5
+accuracy: 0,96
+
+TEST SET- min_samples_leaf=2,n_jobs=5
+accuracy: 0,82
+
+TRAIN SET- MAX DEPTH 2
+accuracy: 0,63
+
+TEST SET- MAX DEPTH 2
+accuracy: 0,64
+
+TRAIN SET- CRITERION "ENTROPY"
+accuracy: 0,99
+
+TEST SET- CRITERION "ENTROPY"
+accuracy: 0,73
